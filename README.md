@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+# Stack Overflown
+
+Organize the falling blocks into the current debug pattern before the stack overflows! ⏳
+
+## How to Develop
+
+- `index.html` - the game container for playing
+- `index.js` - the primary game logic
+- `patterns.js` - the error patterns to match during gameplay
+- `style.css` - the game formatting and styling
+=======
 <div align="center">
 
 # 🎉 Congratulations TomasTesfay! 🎉
@@ -35,3 +47,4 @@
 
 &copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
 
+>>>>>>> origin/main
