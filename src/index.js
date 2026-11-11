@@ -38,6 +38,12 @@ let currentPiece = null;
 let currentX = 0;
 let currentY = 0;
 let score = 0;
+<<<<<<< HEAD
+let highScore = 0;
+let level = 1;
+let patternsCleared = 0;
+=======
+>>>>>>> origin/main
 let gameOver = false;
 let isPaused = false;
 let dropCounter = 0;
@@ -57,6 +63,13 @@ function init() {
     .fill(null)
     .map(() => Array(COLS).fill(0));
 
+<<<<<<< HEAD
+  // Load high score from localStorage
+  highScore = parseInt(localStorage.getItem("stackOverflownHighScore")) || 0;
+  document.getElementById("high-score").textContent = highScore;
+  
+=======
+>>>>>>> origin/main
   // Set initial target pattern
   setNewTargetPattern();
 
@@ -269,6 +282,15 @@ function checkPatternMatch() {
       if (matchesPattern(startRow, startCol)) {
         clearPattern(startRow, startCol);
         score += 100;
+<<<<<<< HEAD
+        patternsCleared++;
+        if (patternsCleared % 5 === 0) {
+          level++;
+          dropInterval = Math.max(200, 1000 - (level - 1) * 100);
+          document.getElementById("level").textContent = level;
+        }
+=======
+>>>>>>> origin/main
         updateScore();
         setNewTargetPattern();
         return;
@@ -307,6 +329,16 @@ function clearPattern(startRow, startCol) {
 // Update score display
 function updateScore() {
   document.getElementById("score").textContent = score;
+<<<<<<< HEAD
+
+  // Update high score if current score exceeds it
+  if (score > highScore) {
+    highScore = score;
+    document.getElementById("high-score").textContent = highScore;
+    localStorage.setItem("stackOverflownHighScore", highScore);
+  }
+=======
+>>>>>>> origin/main
 }
 
 // Handle keyboard input
